@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <section class="container">
+        <h1>Expense Tracker</h1>
+        <div class="inner">
+            <div class="side">
+                <div class="inner-side" id="main-side">
+                    <h2>New Expense</h2>
+                    <input type="text" id="expenseName" placeholder="Expense Name">
+                    <select id="Category">
+                        <option>Utilities</option>
+                    </select>
+                    <input type="date" id="defaultDate">
+                    <input id="amount" type="number" placeholder="Amount">
+                    <button onclick="addExpense()">Add Expense</button>
+
+                    <h3>Add Category</h3>
+                    <input id="newCategory" placeholder="Category Name">
+                    <button onclick="addCategory()">Add Category</button>
+                    <span>Filter Category</span>
+                    <select id="Filter" onchange="filterTable()">
+                        <option>Show All</option>
+                        <option>Utilities</option>
+                    </select>
+                </div>
+                <div class="inner-side">
+                    <span>View</span>
+                    <select id="View" onchange="changeView()">
+                        <option>Table</option>
+                        <option>Visual Charts</option>
+                    </select>
+                </div>
+                <div class="inner-side" id="chartMenu">
+                    <span>Date To Date</span>
+                    <input type="date" id="startDate">
+                    <input type="date" id="endDate">
+                    <button onclick="loadChartDateToDate()">View Range</button>
+                </div>
+            </div>
+            <div class="defaultTableContainer" id="tableContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTable"></tbody>
+                </table>
+            </div>
+            <div class="defaultTableContainer chartStyling" id="chartContainer">
+                <canvas id="pieChart"></canvas>
+                <canvas id="barChart"></canvas>
+                <canvas id="dtdpieChart"></canvas>
+                <canvas id="dtdbarChart"></canvas>
+                <canvas id="monthlyChart"></canvas>
+                <div class="chartStatistics">
+                    <span>Statistics</span>
+                    <p id="monthlyAverage"></p>
+                    <p id="yearlyPrediction"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

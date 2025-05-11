@@ -1,0 +1,119 @@
+:root {
+    --primary: #007bff;
+}
+body {
+    width:99vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width: 1200px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 3rem;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+h1 {
+    text-align: center;
+    color: var(--primary);
+    font-weight: 1000;
+    font-size: 1.9rem;
+}
+h2, h3, span {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    padding-top: 1rem;
+}
+span {
+    padding-top: 1rem;
+    font-weight: 600;
+}
+.inner {
+    display: flex;
+}
+.side {
+    width: 250px;
+}
+.inner-side {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem 0 1.5rem;
+    gap: 1rem;
+}
+.inner-side input {
+    padding: 0.5rem;
+}
+.inner-side select {
+    padding: 0.5rem;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+}
+.inner-side button {
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.75rem;
+}
+.inner-side button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+.defaultTableContainer {
+    margin-right: 1.5rem;
+    margin-top: -0.5rem;
+}
+.chartStyling {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+canvas {
+    max-width: 400px;
+    max-height: 300px;
+}
+.chartStatistics {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+@media (max-width: 900px) {
+    .side {
+        width: 150px;
+    }
+    th, td {
+        font-size: 0.75rem;
+        padding: 12px 0px;
+    }
+    .chartStyling {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        width: 95%;
+    }
+    canvas {
+        max-width: 90%;
+    }
+}
