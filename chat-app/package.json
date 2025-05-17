@@ -1,0 +1,16 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "This project is a simple quiz with some randomised questions and answers. The user is asked a series of questions and their answers are checked against the correct answers. The user's score is then displayed at the end, and the ability to restart the quiz.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ws": "^8.18.2"
+  }
+}
